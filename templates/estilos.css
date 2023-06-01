@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Mukata';
+    src: url('Mukata-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukata';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(157, 227, 184);
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 200;
+    color: #222;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+h1:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+/* Estilos para el botón */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Color de fondo */
+    color: #FFFFFF; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Estilos cuando se pasa el cursor por encima del botón */
+  .button:hover {
+    background-color: #45a049; /* Color de fondo cambiado */
+  }
+  
+  /* Estilos cuando se presiona el botón */
+  .button:active {
+    background-color: #3e8e41; /* Color de fondo cambiado */
+  }
+
+.container {
+    position: relative;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .burbuja {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #79a1e6;
+    position: absolute;
+    animation-name: mover-burbuja;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes mover-burbuja {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-100vh);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  

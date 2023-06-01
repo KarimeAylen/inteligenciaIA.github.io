@@ -4,7 +4,7 @@ import mediapipe as mp
 import os
 
 #----------------------------- Creamos la carpeta donde almacenaremos el entrenamiento ---------------------------------
-nombre = 'letra_y' #podemos poner mano derecha y correrlo
+nombre = 'letra_f' #podemos poner mano derecha y correrlo
 direccion = __path__=r'C:\Users\karim\Desktop\IAPeteVScode\Fotos\Validacion' #validación despues
 carpeta = direccion + '/' + nombre
 if not os.path.exists(carpeta):
@@ -12,7 +12,7 @@ if not os.path.exists(carpeta):
     os.makedirs(carpeta)
 
 #Asignamos un contador para el nombre de la fotos
-cont = 0;
+cont = 42; #0
 
 #Leemos la camara
 cap = cv2.VideoCapture(0)
@@ -63,7 +63,7 @@ while (1):
 
     cv2.imshow("Video",frame)
     k = cv2.waitKey(1)
-    if k == 20 or cont >= 10:   #EL TIENE 300
+    if k == 20 or cont >= 69:   #EL TIENE 300
         break
 cap.release()
 cv2.destroyAllWindows()
